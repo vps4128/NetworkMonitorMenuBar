@@ -41,6 +41,14 @@ export NOTARYTOOL_PROFILE="AC_NOTARY_PROFILE"
 
 你可以按需执行 `swift build`、`codesign`、`notarytool`、`stapler` 完成发布。
 
+## 仅自用（未签名/未公证）
+
+如果从 DMG 安装后提示“已损坏，无法打开”，执行：
+
+```bash
+xattr -rd com.apple.quarantine /Applications/NetworkMonitorMenuBar.app
+```
+
 生成文件：
 - `dist/NetworkMonitorMenuBar-1.0.2.dmg`
 
